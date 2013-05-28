@@ -1,0 +1,8 @@
+#file .inputrc
+#readline configure file
+
+#one tab to show all avaliable command
+set show-all-if-ambiguous on
+#set editing-mode vi
+#set keymap vi
+Control-v: "`xclip -o`"
