@@ -1,9 +1,4 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# .mybashrc
 
 # User specific aliases and functions
 alias ..='cd ..'
