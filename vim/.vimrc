@@ -14,7 +14,8 @@ set t_Co=256
 set hlsearch
 set noerrorbells
 set novisualbell
-set clipboard+=unnamedplus
+" using system clipboard as default
+set clipboard=unnamedplus
 set showmatch
 set matchtime=2
 set magic
@@ -38,7 +39,7 @@ highlight StatusLineNC guifg=Gray guibg=White
 
 "GNU Coding Standards
 set cindent
-set cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+"set cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 set textwidth=79
 set fo-=ro fo+=cql
 "END
@@ -55,3 +56,4 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Show_One_File=1
 colors desert
 hi CursorLine term=bold cterm=bold gui=bold
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
