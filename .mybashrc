@@ -9,8 +9,8 @@ alias etc='cd /etc'
 alias tmp='cd /tmp'
 alias h='cd ~-'
 alias l='cd ~+'
-alias eg='grep -inIEr -C1 --color=ALWAYS --exclude-dir="\.{git,svn}$"'
-export PS1="\[\e[30;1m\][\[\e[32;1m\]\u\[\e[30;1m\]@\[\e[32;1m\]\h \[\e[34;1m\]\w\[\e[30;1m\]]\[\e[31;1m\]\!\[\e[30;1m\]$\n\[\e[35;1m\]\t>\[\e[0m\]"
+alias eg='grep -inIEr -C1 --color=ALWAYS --exclude-dir="*\.git*" --exclude-dir="*\.svn*"'
+export -n PS1="\[\e[30;1m\][\[\e[32;1m\]\u\[\e[30;1m\]@\[\e[32;1m\]\h \[\e[34;1m\]\w\[\e[30;1m\]]\[\e[31;1m\]\!\[\e[30;1m\]$\n\[\e[35;1m\]\t>\[\e[0m\]"
 
 #check the xclip exist
 #xclip -version > /dev/null 2>&1
@@ -22,11 +22,11 @@ export PS1="\[\e[30;1m\][\[\e[32;1m\]\u\[\e[30;1m\]@\[\e[32;1m\]\h \[\e[34;1m\]\
 
 export CLICOLOR=1
 
-export CDPATH='.:~:~/Desktop:~/Documents'
+#export -n CDPATH='.:~:~/Desktop:~/Documents'
 export HISTIGNORE='&:ls:ls *:exit:cd:cd *'
 #export TMOUT=300
 #set ignoreeof #ignore Ctrl+D
-set show-all-if-ambiguous on
+#set show-all-if-ambiguous on
 #related with /etc/inputrc || ~/.inputrc
 set -o vi 
 set EDITOR=vim
