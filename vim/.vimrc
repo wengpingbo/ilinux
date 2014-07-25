@@ -38,18 +38,23 @@ highlight StatusLine guifg=SlateBlue guibg=Yellow
 highlight StatusLineNC guifg=Gray guibg=White 
 
 "GNU Coding Standards
-set cindent
+"set cindent
 "set cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
-set textwidth=79
-set fo-=ro fo+=cql
+"set textwidth=79
+"set fo-=ro fo+=cql
 "END
 
+"move in visual line
+nnoremap j gj
+nnoremap k gk
+
+" fold code
 nnoremap <space> za
 "multi-window shortcut
-map wh <c-w>h
-map wl <c-w>l
-map wj <c-w>j
-map wk <c-w>k
+nnoremap wh <c-w>h
+nnoremap wl <c-w>l
+nnoremap wj <c-w>j
+nnoremap wk <c-w>k
 "taglist configure and shortcut
 map LL :TlistToggle<cr>
 let Tlist_Exit_OnlyWindow=1
