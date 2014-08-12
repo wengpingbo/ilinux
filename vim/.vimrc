@@ -6,6 +6,8 @@ set showcmd
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+"repalce all tab with spaces, if you want to insert real tab, type Ctrl-V<tab>
+set expandtab
 filetype plugin indent on
 set ignorecase smartcase
 set incsearch
@@ -47,6 +49,10 @@ highlight StatusLineNC guifg=Gray guibg=White
 "move in visual line
 nnoremap j gj
 nnoremap k gk
+
+"keep visual block after indent
+vnoremap < <gv
+vnoremap > >gv
 
 " fold code
 nnoremap <space> za
