@@ -3,11 +3,12 @@ set number
 set cursorline
 set ruler
 set showcmd
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-"repalce all tab with spaces, if you want to insert real tab, type Ctrl-V<tab>
-set expandtab
+" for linux kernel
+set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+" for Windows in VS IDE
+"set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" for Java
+"set softtabstop=4 shiftwidth=4 expandtab
 filetype plugin indent on
 set ignorecase smartcase
 set incsearch
