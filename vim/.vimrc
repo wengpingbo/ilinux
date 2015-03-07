@@ -35,6 +35,9 @@ set whichwrap=b,s,<,>,h,l
 set fileformats=unix,dos,mac
 "conceal preview in pop window
 set completeopt=longest,menu
+set mouse=a
+" auto-indent when paste from third program
+"set paste
 "auto source vim config file, when the file has changed
 autocmd! bufwritepost .vimrc source ~/.vimrc
 highlight StatusLine guifg=SlateBlue guibg=Yellow
@@ -50,6 +53,9 @@ highlight StatusLineNC guifg=Gray guibg=White
 "move in visual line
 nnoremap j gj
 nnoremap k gk
+
+"replay the macro in q register
+nnoremap <C-j> @q
 
 "keep visual block after indent
 vnoremap < <gv
