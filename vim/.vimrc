@@ -36,6 +36,8 @@ set fileformats=unix,dos,mac
 "conceal preview in pop window
 set completeopt=longest,menu
 set mouse=a
+" disable autoload_cscope menu & macro
+let g:autocscope_menus=1
 " auto-indent when paste from third program
 "set paste
 "auto source vim config file, when the file has changed
