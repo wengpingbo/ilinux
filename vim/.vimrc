@@ -74,6 +74,12 @@ nnoremap wk <c-w>k
 map LL :TlistToggle<cr>
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Show_One_File=1
+
 colors desert
 hi CursorLine term=bold cterm=bold gui=bold
+" custom search highlight color in terminal
+hi IncSearch cterm=bold ctermfg=white ctermbg=NONE
+hi Search cterm=bold ctermfg=white ctermbg=NONE
+
+" auto copy vim clipboard to system clipboard when exiting
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
