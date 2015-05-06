@@ -11,7 +11,7 @@ alias h='cd ~-'
 alias l='cd ~+'
 alias vimn='vim -u NONE'
 alias xclip='xclip -selection c'
-alias eg='grep -inIEr -C1 --color=ALWAYS --exclude-dir="*\.git*" --exclude-dir="*\.svn*"'
+alias eg='grep -inIEr -C1 --color=ALWAYS --exclude-dir=".git" --exclude-dir=".svn" --exclude="cscope.out"'
 export -n PS1="\[\e[30;1m\][\[\e[32;1m\]\u\[\e[30;1m\]@\[\e[32;1m\]\h \[\e[34;1m\]\w\[\e[30;1m\]]\[\e[31;1m\]\!\[\e[30;1m\]$\n\[\e[35;1m\]\t>\[\e[0m\]"
 
 #check the xclip exist
