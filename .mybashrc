@@ -1,14 +1,17 @@
 # .mybashrc
 
+# load dirstack functions
+[ -f .icd.conf ] && source .icd.conf
+
 # User specific aliases and functions
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..='icd_main ..'
+alias ...='icd_main ../..'
+alias ....='icd_main ../../..'
 alias sl='ls'
-alias etc='cd /etc'
-alias tmp='cd /tmp'
-alias h='cd ~-'
-alias l='cd ~+'
+alias etc='icd_main /etc'
+alias tmp='icd_main /tmp'
+#alias h='cd ~-'
+#alias l='cd ~+'
 alias vimn='vim -u NONE'
 alias xclip='xclip -selection c'
 alias eg='grep -inIEr -C1 --color=ALWAYS --exclude-dir=".git" --exclude-dir=".svn" --exclude="cscope.out"'
