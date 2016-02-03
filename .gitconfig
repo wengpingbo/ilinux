@@ -1,0 +1,25 @@
+[user]
+	name = Pingbo Wen
+	email = wengpingbo@gmail.com
+	editor = vim
+[color]
+	ui = auto
+[core]
+	editor = vim
+	#autocrlf = input ; for mac / win
+	#filemode = false ; if you are on broken filesystem
+[sendemail]
+	smtpUser = pingbo.wen@linaro.org
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpServerPort = 587
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	di = diff
+	dis = diff --staged
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	rt = revert
+	rtc = revert --continue
