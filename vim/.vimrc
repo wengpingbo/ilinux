@@ -29,10 +29,10 @@ set cmdheight=1
 set foldmethod=syntax
 set laststatus=2
 "custom the status bar in vim
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
+set statusline=\ %<%f[%1*%M%*%n%R%H]\ -\ %B,%o%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
 set shortmess=atl
 set whichwrap=b,s,<,>,h,l
-set fileformats=unix,dos,mac
+set fileformats=unix
 "conceal preview in pop window
 set completeopt=longest,menu
 set mouse=a
@@ -80,6 +80,9 @@ hi CursorLine term=bold cterm=bold gui=bold
 " custom search highlight color in terminal
 hi IncSearch cterm=bold ctermfg=white ctermbg=NONE
 hi Search cterm=bold ctermfg=white ctermbg=NONE
+
+" for ctags.vim plugin
+let g:ctags_statusline=1
 
 " auto copy vim clipboard to system clipboard when exiting
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
