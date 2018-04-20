@@ -18,7 +18,11 @@ set hlsearch
 set noerrorbells
 set novisualbell
 " using system clipboard as default
-set clipboard=unnamedplus
+if has("macunix")
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 set showmatch
 set matchtime=2
 set magic
@@ -32,7 +36,7 @@ set laststatus=2
 set statusline=\ %<%f[%1*%M%*%n%R%H]\ -\ %B,%o%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)
 set shortmess=atl
 set whichwrap=b,s,<,>,h,l
-set fileformats=unix
+set fileformats=unix,dos,mac
 "conceal preview in pop window
 set completeopt=longest,menu
 set mouse=a
@@ -44,6 +48,9 @@ let g:autocscope_menus=1
 autocmd! bufwritepost .vimrc source ~/.vimrc
 highlight StatusLine guifg=SlateBlue guibg=Yellow
 highlight StatusLineNC guifg=Gray guibg=White 
+
+" for pathogen plugin
+execute pathogen#infect()
 
 "GNU Coding Standards
 "set cindent
@@ -70,19 +77,30 @@ nnoremap wh <c-w>h
 nnoremap wl <c-w>l
 nnoremap wj <c-w>j
 nnoremap wk <c-w>k
-"taglist configure and shortcut
-map LL :TlistToggle<cr>
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Show_One_File=1
+" nerdtree plugin
+map LL :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" tagbar plugin
+map RR :TagbarToggle<CR>
+" autoformat plugin
+map II :Autoformat<CR>
+" ycm plugin
+let g:ycm_auto_trigger=0
+set shortmess+=c
+function! YCMEnableToggle()
+  if g:ycm_auto_trigger
+    let g:ycm_auto_trigger=0
+  else
+    let g:ycm_auto_trigger=1
+  endif
+endfunction
+nnoremap YY :call YCMEnableToggle()<CR>
 
 colors desert
 hi CursorLine term=bold cterm=bold gui=bold
 " custom search highlight color in terminal
 hi IncSearch cterm=bold ctermfg=white ctermbg=NONE
 hi Search cterm=bold ctermfg=white ctermbg=NONE
-
-" for ctags.vim plugin
-let g:ctags_statusline=1
 
 " auto copy vim clipboard to system clipboard when exiting
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
