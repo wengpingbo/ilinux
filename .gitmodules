@@ -1,9 +1,6 @@
 [submodule "vim/.vim/bundle/a.vim"]
 	path = vim/.vim/bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
-[submodule "vim/.vim/bundle/YouCompleteMe"]
-	path = vim/.vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git

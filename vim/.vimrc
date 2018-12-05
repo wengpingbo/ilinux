@@ -84,17 +84,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map RR :TagbarToggle<CR>
 " autoformat plugin
 map II :Autoformat<CR>
-" ycm plugin
-let g:ycm_auto_trigger=0
-set shortmess+=c
-function! YCMEnableToggle()
-  if g:ycm_auto_trigger
-    let g:ycm_auto_trigger=0
-  else
-    let g:ycm_auto_trigger=1
-  endif
-endfunction
-nnoremap YY :call YCMEnableToggle()<CR>
 
 colors desert
 hi CursorLine term=bold cterm=bold gui=bold
