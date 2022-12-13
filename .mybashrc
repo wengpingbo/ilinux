@@ -28,7 +28,7 @@ export -n PS1="\[\e[30;1m\][\[\e[32;1m\]\u\[\e[30;1m\]@\[\e[32;1m\]\h \[\e[34;1m
 export CLICOLOR=1
 
 #export -n CDPATH='.:~:~/Desktop:~/Documents'
-export HISTIGNORE='&:ls:ls *:exit:cd:cd *'
+#export HISTIGNORE='&:ls:ls *:exit:cd:cd *'
 #export TMOUT=300
 #set ignoreeof #ignore Ctrl+D
 #set show-all-if-ambiguous on

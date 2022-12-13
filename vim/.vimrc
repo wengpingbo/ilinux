@@ -39,7 +39,7 @@ set whichwrap=b,s,<,>,h,l
 set fileformats=unix,dos,mac
 "conceal preview in pop window
 set completeopt=longest,menu
-set mouse=a
+"set mouse=a
 " disable autoload_cscope menu & macro
 let g:autocscope_menus=1
 " auto-indent when paste from third program
