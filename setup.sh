@@ -22,7 +22,7 @@ if [ -f ~/.vimrc ]; then
 	echo "Backup exist .vimrc to ~/.vimrc.bak"
 	mv ~/.vim ~/.vim.bak
 fi
-cp -vfr .vim .vimrc ~/
+cp -vfr .vim .vimrc .tmux.conf ~/
 
 echo "Install dependency"
 SUDO="sudo"
